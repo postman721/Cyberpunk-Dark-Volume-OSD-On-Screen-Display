@@ -4,6 +4,8 @@
 
 ![Image](https://github.com/user-attachments/assets/a48cfcc3-e081-4632-80fc-292c32407daa)
 
+Used wallpaper is this: https://www.techtimejourney.net/wp-content/gallery/2024-gallery/sky.x78351.png
+
 A sleek **Cyberpunk-inspired** Volume OSD for Linux, using **PyQt5** and **evdev** for global keyboard capture.  
 This allows volume control **without sudo** by properly setting udev rules and group permissions.
 
