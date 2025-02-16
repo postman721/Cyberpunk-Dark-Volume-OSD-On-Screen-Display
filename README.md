@@ -41,7 +41,8 @@ sudo apt update && sudo apt install python3 python3-pyqt5 python3-evdev pulseaud
 	- osd_rules_install.sh – Installs udev rules and adds user to input group.
 	- osd_rules_uninstall.sh – Reverts udev rules and removes user from input group.
 	- ⚠️ Always check scripts before executing.
-    
+	- Notice: For me the reboot was the thing that fixed the udev rule permissions completely.
+
 chmod +x insert_script_name_here.sh
 
 If you want to be certain that the script will run, use bash in front of it: bash insert_script_name_here.sh
