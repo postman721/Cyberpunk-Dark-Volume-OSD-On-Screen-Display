@@ -81,4 +81,7 @@ chmod +x osd.py
 python3 osd.py
 ```
 
+Systemd enabled service automation with: 
+```python python3 osd.py --install-service```
+
 The OSD will display volume changes whenever you press Alt + Up/Down/M.
