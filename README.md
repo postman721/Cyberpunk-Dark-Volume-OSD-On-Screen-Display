@@ -73,7 +73,7 @@ Keyboard is not a fixed entity and thus its numbering will move upon fresh insta
 		sudo nano /usr/share/osd.py #Open osd.py
 
 
-		KEYBOARD_DEVICE = "/dev/input/event4"  #Modify code to match the device number of keyboard.
+		KEYBOARD_DEVICE = "/dev/input/event4"  #Modify the number to match the device number of keyboard.
 
 
 		Exit Openbox and login again.
