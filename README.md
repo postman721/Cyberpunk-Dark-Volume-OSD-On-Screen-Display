@@ -14,7 +14,8 @@ This allows volume control **without sudo** by properly setting udev rules and g
 ## **Key Combinations:**
   - **Alt + Up** → Increase system volume (default step: **5%**)
   - **Alt + Down** → Decrease system volume (**5%** step)
-  - **Alt + M** → Toggle **Mute/Unmute**  
+  - **Alt + M** → Toggle **Mute/Unmute**
+  - If keycodes do not work, install evtest and change the input device to match your keyboard.
 
 ### **Features**
 ✔ **Global Hotkeys** – Works across all apps (via evdev).  
