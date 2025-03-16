@@ -60,6 +60,25 @@ This will:
 	- Sets up udev rules so /dev/input/event* devices are accessible to the input group.
 	- Adds the current user to input so they can read keyboard events.
 
+There is also an alternative script,made to address live-build issues: normal_system_fix.sh. Try that script if the other one fails.
+
+## The wandering keyboard issue. 
+
+Keyboard is not a fixed entity and thus its numbering will move upon fresh install. This will do harm to osd. Here is a fix for it.
+
+		sudo apt install evtest #Install evtest
+
+		sudo evtest #Find your keyboard
+
+		sudo nano /usr/share/osd.py #Open osd.py
+
+
+		KEYBOARD_DEVICE = "/dev/input/event4"  #Modify code to match the device number of keyboard.
+
+
+		Exit Openbox and login again.
+
+
 ## Uninstall (Revert Permissions)
 
 If you want to remove permissions and reset udev rules:
