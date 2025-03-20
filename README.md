@@ -96,7 +96,6 @@ This approach gives you ALT keys and standard volume keys of keyboard, since the
 If all works add **osd &** to .xinitrc or .config/openbox/autostart file or equivalent.
 
 ### Systemd enabled service automation with: 
-``` python3 systemd.py```
 
 ALT keys will not work when systemd approach is used, since the service does not attach to any tty. Normal volume keys of keyboard will work.
 Notice. Systemd approach assumes that osd.py is placed under /usr/share
