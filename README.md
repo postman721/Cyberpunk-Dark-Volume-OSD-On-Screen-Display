@@ -101,7 +101,7 @@ ALT keys **might not work** when systemd approach is used, since the service doe
 
 However, the ALT key issue seems to be keyboard specific: With some keyboard models ALT keys work. Normal volume keys of keyboard should work just fine, regardless of ALT keys.
 
-Notice. Systemd approach assumes that osd.py is placed under /usr/share
+Notice. Systemd approach assumes that osd.py is placed under /usr/share/
 
 ### Full implementation commands of systemd approach
 
