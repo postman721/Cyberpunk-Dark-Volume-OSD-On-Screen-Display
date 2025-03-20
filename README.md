@@ -107,7 +107,7 @@ Notice. Systemd approach assumes that osd.py is placed under /usr/share
 sudo cp osd.py /usr/share
 sudo chmod +x /usr/share/osd.py
 python3 systemd.py
-```bash
+```
 
 
 ## Legacy, Should not be needed anymore: The wandering keyboard issue. 
