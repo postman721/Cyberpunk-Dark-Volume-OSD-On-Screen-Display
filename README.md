@@ -96,7 +96,7 @@ This approach gives you ALT keys and standard volume keys of keyboard, since the
 
 
 ### Systemd enabled service automation with: 
-```python python3 systemd.py```
+``` python3 systemd.py```
 
 The OSD will display volume changes whenever you press standard volume keys of keyboard. ALT keys will not work when systemd approach is used, since the service does not attach to any tty.
 
