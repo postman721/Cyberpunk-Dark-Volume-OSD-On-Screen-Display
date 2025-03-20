@@ -22,8 +22,8 @@ def install_systemd_service():
     service_path = os.path.join(service_dir, "volume-osd.service")
     print("[INFO] Service file will be created at:", service_path)
 
-    # Assume osd.py is in the same directory as this script
-    script_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "osd.py")
+    # Use the hard-coded path for osd.py
+    script_path = "/usr/share/osd.py"
     if not os.path.exists(script_path):
         print("[ERROR] osd.py not found at:", script_path)
         sys.exit(1)
