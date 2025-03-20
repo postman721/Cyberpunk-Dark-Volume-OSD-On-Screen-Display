@@ -97,7 +97,10 @@ If all works add **osd &** to .xinitrc or .config/openbox/autostart file or equi
 
 ### Systemd enabled service automation with: 
 
-ALT keys will not work when systemd approach is used, since the service does not attach to any tty. Normal volume keys of keyboard will work.
+ALT keys **might not work** when systemd approach is used, since the service does not attach to any tty. 
+
+However, the ALT key issue seems to be keyboard specific: With some keyboard models ALT keys work. Normal volume keys of keyboard should work just fine, regardless of ALT keys.
+
 Notice. Systemd approach assumes that osd.py is placed under /usr/share
 
 ### Full implementation commands of systemd approach
@@ -108,6 +111,9 @@ sudo chmod +x /usr/share/osd.py
 python3 systemd.py
 ```
 
+### Why give two approaches?
+
+.xinitrc and openbox autostart is nice but since things are more systemd these days, two solutions are offered.
 
 ## Legacy, Should not be needed anymore: The wandering keyboard issue. 
 
