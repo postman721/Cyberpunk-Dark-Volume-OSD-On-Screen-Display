@@ -1,5 +1,7 @@
 # **Cyberpunk Dark Volume OSD (On-Screen Display)**  
 
+Copyright JJ Posti - techtimejourney.net - 2025, released under GPL2.
+
 ![Image](https://github.com/user-attachments/assets/7838ca2f-6173-440f-9814-ac5c682deef7)
 
 ![Image](https://github.com/user-attachments/assets/a48cfcc3-e081-4632-80fc-292c32407daa)
