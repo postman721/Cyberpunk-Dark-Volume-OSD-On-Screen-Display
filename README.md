@@ -109,6 +109,8 @@ Notice. Systemd approach assumes that osd.py is placed under /usr/share/
 sudo cp osd.py /usr/share
 sudo chmod +x /usr/share/osd.py
 python3 systemd.py
+systemctl --user status volume-osd  #See the status of the service.
+
 ```
 
 ### Why give two approaches?
