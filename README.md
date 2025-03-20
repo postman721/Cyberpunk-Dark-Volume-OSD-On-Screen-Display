@@ -98,8 +98,16 @@ This approach gives you ALT keys and standard volume keys of keyboard, since the
 ### Systemd enabled service automation with: 
 ``` python3 systemd.py```
 
-The OSD will display volume changes whenever you press standard volume keys of keyboard. ALT keys will not work when systemd approach is used, since the service does not attach to any tty.
+ALT keys will not work when systemd approach is used, since the service does not attach to any tty. Normal volume keys of keyboard will work.
+Notice. Systemd approach assumes that osd.py is placed under /usr/share
 
+### Full implementation commands of systemd approach
+
+```bash
+sudo cp osd.py /usr/share
+sudo chmod +x /usr/share/osd.py
+python3 systemd.py
+```bash
 
 
 ## Legacy, Should not be needed anymore: The wandering keyboard issue. 
