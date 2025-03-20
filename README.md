@@ -86,14 +86,14 @@ This will:
 
 ### Running the Volume OSD via .xinitrc or .config/openbox/autostart
 
-Once installed, launch the OSD:
+Once installed, launch the OSD (test it):
 
 ```python
 chmod +x osd.py 
 python3 osd.py
 ```
 This approach gives you ALT keys and standard volume keys of keyboard, since the program is able to attach directly into tty.
-
+If all works add **osd &** to .xinitrc or .config/openbox/autostart file or equivalent.
 
 ### Systemd enabled service automation with: 
 ``` python3 systemd.py```
