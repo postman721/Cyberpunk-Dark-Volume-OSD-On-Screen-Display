@@ -13,11 +13,13 @@ This allows volume control **without sudo** by properly setting udev rules and g
 
 ---
 
-## **Key Combinations:**
-  - **Alt + Up** → Increase system volume (default step: **5%**)
-  - **Alt + Down** → Decrease system volume (**5%** step)
-  - **Alt + M** → Toggle **Mute/Unmute**
-  - If keycodes do not work, install evtest and change the input device to match your keyboard.
+### **Key Combinations:**
+  - **Alt + Up** → Increase system volume (default step: **5%**).
+  - **Alt + Down** → Decrease system volume (**5%** step).
+  - **Alt + M** → Toggle **Mute/Unmute**'
+  -  **Standard volume keys** 
+
+- If keycodes do not work, install evtest and change the input device to match your keyboard.
 
 ### **Features**
 ✔ **Global Hotkeys** – Works across all apps (via evdev).  
@@ -25,9 +27,13 @@ This allows volume control **without sudo** by properly setting udev rules and g
 ✔ **No Sudo for Volume** – Once installed, runs as a normal user.  
 ✔ **Cyberpunk-Themed UI** – Dark mode, neon accents.  
 
+### New features (20th of March).
+  - Standard volume keys of keyboard should also work.
+  - Current version should automatically discover keyboard devices.
+  - Systemd is separated as its own file. You can choose to use systemd and remove the .xinitrc's OR .config/openbox/autostart's **osd &** line.
 ---
 
-## **Installation**
+### **Installation**
 
 Install dependencies:  
 ```bash
@@ -64,7 +70,39 @@ This will:
 
 There is also an alternative script,made to address live-build issues: normal_system_fix.sh. Try that script if the other one fails.
 
-## The wandering keyboard issue. 
+
+## Uninstall (Revert Permissions)
+
+If you want to remove permissions and reset udev rules:
+
+```bash
+sudo ./osd_rules_uninstall.sh
+```
+This will:
+
+	- Remove the custom udev rule.
+	- Reload udev so devices revert to default permissions.
+	- Remove the user from the input group.
+
+### Running the Volume OSD via .xinitrc or .config/openbox/autostart
+
+Once installed, launch the OSD:
+
+```python
+chmod +x osd.py 
+python3 osd.py
+```
+This approach gives you ALT keys and standard volume keys of keyboard, since the program is able to attach directly into tty.
+
+
+### Systemd enabled service automation with: 
+```python python3 systemd.py```
+
+The OSD will display volume changes whenever you press standard volume keys of keyboard. ALT keys will not work when systemd approach is used, since the service does not attach to any tty.
+
+
+
+## Legacy, Should not be needed anymore: The wandering keyboard issue. 
 
 Keyboard is not a fixed entity and thus its numbering will move upon fresh install. This will do harm to osd. Here is a fix for it.
 
@@ -81,29 +119,4 @@ Keyboard is not a fixed entity and thus its numbering will move upon fresh insta
 		Exit Openbox and login again.
 
 
-## Uninstall (Revert Permissions)
 
-If you want to remove permissions and reset udev rules:
-
-```bash
-sudo ./osd_rules_uninstall.sh
-```
-This will:
-
-	- Remove the custom udev rule.
-	- Reload udev so devices revert to default permissions.
-	- Remove the user from the input group.
-
-### Running the Volume OSD
-
-Once installed, launch the OSD:
-
-```python
-chmod +x osd.py 
-python3 osd.py
-```
-
-Systemd enabled service automation with: 
-```python python3 osd.py --install-service```
-
-The OSD will display volume changes whenever you press Alt + Up/Down/M.
